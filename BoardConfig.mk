@@ -24,6 +24,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG := X00I_defconfig
+TARGET_KERNEL_VERSION := 4.9
 
 # Inherit from common msm8937-common
 -include device/asus/msm8937-common/BoardConfigCommon.mk
