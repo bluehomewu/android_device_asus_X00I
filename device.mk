@@ -26,18 +26,22 @@ TARGET_SCREEN_WIDTH := 720
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-havoc
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
+    $(LOCAL_PATH)/overlay-havoc/havoc-sdk \
     $(LOCAL_PATH)/overlay/packages/apps/Snap
 
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# Camera
+PRODUCT_PACKAGES += \
+    libgui_vendor
+
 # Fingerprint
 PRODUCT_PACKAGES += \
-    libunwind
+    libunwind.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.X00I
@@ -49,17 +53,25 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gf5216.kl:system/usr/keylayout/gf5216.kl \
-    $(LOCAL_PATH)/keylayout/qwerty.kl:system/usr/keylayout/querty.kl
+    $(LOCAL_PATH)/keylayout/gf5216.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gf5216.kl \
+    $(LOCAL_PATH)/keylayout/qwerty.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/querty.kl
 
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
+EXTRA_VENDOR_LIBRARIES += \
+    libcrypto
+
 # Rootdir
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.device.rc
+
+# Sensors 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf 
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

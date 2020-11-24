@@ -66,6 +66,7 @@ vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_workspaceFile.qwsp
 # Camera
 vendor/lib/hw/camera.msm8937.so
 lib/libBeautyShotWrapper.so:vendor/lib/libBeautyShotWrapper.so
+lib/libcamera_client.so:vendor/lib/libcamera_client.so
 lib/libcamera_selfie.so:vendor/lib/libcamera_selfie.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
@@ -778,6 +779,7 @@ vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 vendor/bin/gx_fpd
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/hw/fingerprintfocal.default.so
 vendor/lib64/hw/gxfingerprint.default.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint.hwbinder@2.1.so
