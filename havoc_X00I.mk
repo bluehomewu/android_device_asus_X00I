@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Inherit from X00I device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -27,7 +27,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00I
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := lineage_X00I
+PRODUCT_NAME := havoc_X00I
 PRODUCT_MODEL := ASUS_X00ID
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
