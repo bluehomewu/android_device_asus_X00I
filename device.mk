@@ -40,8 +40,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libunwind_vendor
 
-EXTRA_VENDOR_LIBRARIES += \ 
-    libbacktrace_vendor \ 
+EXTRA_VENDOR_LIBRARIES += \
+    libbacktrace_vendor \
     libkeystore_binder_vendor
 
 # Gatekeeper
