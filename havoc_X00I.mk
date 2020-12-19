@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Inherit from X00I device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00I
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := lineage_X00I
+PRODUCT_NAME := havoc_X00I
 PRODUCT_MODEL := Zenfone 4 Max
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
